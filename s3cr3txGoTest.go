@@ -36,9 +36,9 @@ func main() {
 	fmt.Println("Done with s3cr3tx Go Test!")
 }
 func io(strDirection string, strInput string) string {
-	var email string = "pk@gratitech.com"                                                                                                                            //"you@yourdomain.com"
-	var APIToken string = "yourS3cr3txAPIToken"
-	var AuthCode string =  "yourS3cr3txAuthCode"
+	var email string = os.Getenv("s3cr3tx_Email")                                                                                                                            //"you@yourdomain.com"
+	var APIToken string = os.Getenv("s3cr3tx_APIToken")
+	var AuthCode string =  os.Getenv("s3cr3txAuthCode")
 	var baseurl string = "https://s3cr3tx.com/Values"
 	req, err := http.NewRequest(http.MethodGet, baseurl, nil)
 	if err != nil {
