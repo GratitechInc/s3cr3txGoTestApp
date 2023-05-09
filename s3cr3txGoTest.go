@@ -38,7 +38,7 @@ func main() {
 func io(strDirection string, strInput string) string {
 	var email string = os.Getenv("s3cr3tx_Email")                                                                                                                            //"you@yourdomain.com"
 	var APIToken string = os.Getenv("s3cr3tx_APIToken")
-	var AuthCode string =  os.Getenv("s3cr3txAuthCode")
+	var AuthCode string =  os.Getenv("s3cr3tx_AuthCode")
 	var baseurl string = "https://s3cr3tx.com/Values"
 	req, err := http.NewRequest(http.MethodGet, baseurl, nil)
 	if err != nil {
